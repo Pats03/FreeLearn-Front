@@ -1,6 +1,8 @@
 import axios from 'axios';
+
 const customFetch = axios.create({
-  baseURL: '/api/v1',
+  baseURL: import.meta.env.PROD ? import.meta.env.VITE_API_URL : '/api/v1',
+  withCredentials: true, // if your backend sends cookies
 });
 
 export default customFetch;
