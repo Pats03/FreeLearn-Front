@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://free-learn-front.vercel.app',
+        target: 'https://free-learn-xi.vercel.app/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
