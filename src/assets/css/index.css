@@ -14,7 +14,7 @@ html {
 
 :root {
   /* colors */
-  --primary-50: #e0f8ff;
+  --primary-50: #e0fcff;
   --primary-100: #bef8fd;
   --primary-200: #87eaf2;
   --primary-300: #54d1db;
@@ -35,7 +35,7 @@ html {
   --grey-600: #475569;
   --grey-700: #334155;
   --grey-800: #1e293b;
-  --grey-900: #7b94cd;
+  --grey-900: #0f172a;
   /* rest of the colors */
   --black: #222;
   --white: #fff;
@@ -77,10 +77,10 @@ html {
 }
 
 .dark-theme {
-  --text-color: #f0f0f0;
-  --text-secondary-color: #cccccc;
-  --background-color: #222;
-  --background-secondary-color: #2a2a2a;
+  --text-color: var(--dark-mode-text-color);
+  --background-color: var(--dark-mode-bg-color);
+  --text-secondary-color: var(--dark-mode-text-secondary-color);
+  --background-secondary-color: var(--dark-mode-bg-secondary-color);
 }
 
 body {
@@ -309,10 +309,6 @@ button:disabled {
   margin-top: 1rem;
 }
 
-.card-title {
-  color: var(--text-color);
-}
-
 .container {
   width: var(--fluid-width);
   max-width: var(--max-width);
@@ -332,43 +328,4 @@ button:disabled {
 .declined {
   background: #ffeeee;
   color: #d66a6a;
-}
-
-.card-subtitle,
-.card-date,
-.card-author,
-.card-status {
-  color: var(--text-secondary-color);
-}
-
-.dark-theme .card-title {
-  color: #f0f0f0;
-}
-
-.dark-theme .card-subtitle,
-.dark-theme .card-date,
-.dark-theme .card-author,
-.dark-theme .card-status {
-  color: #cccccc;
-
-  --text-color: #f0f0f0;
-  --text-secondary-color: #cccccc;
-
-  .dark-theme {
-    --text-color: #ffffff; /* pure white */
-    --text-secondary-color: #dddddd; /* lighter grey */
-    --background-color: #1a1a1a; /* slightly darker bg */
-    --background-secondary-color: #262626; /* better contrast */
-  }
-
-  .dark-theme .card-title {
-    color: #ffffff; /* pure white */
-  }
-
-  .dark-theme .card-subtitle,
-  .dark-theme .card-date,
-  .dark-theme .card-author,
-  .dark-theme .card-status {
-    color: #dddddd;
-  }
 }
