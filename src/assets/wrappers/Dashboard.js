@@ -4,7 +4,7 @@ const Wrapper = styled.section`
   .dashboard {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: #596869;
+    background-color: var(--background-color);
   }
   .dashboard-page {
     width: 90vw;
@@ -21,4 +21,5 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 export default Wrapper;

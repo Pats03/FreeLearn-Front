@@ -20,7 +20,7 @@ const Dashboard = () => {
   //temp
   const navigate = useNavigate();
   const { user, verifiedMediaCount, uploadedCount } = useLoaderData();
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme());
 
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleDarkTheme = () => {
