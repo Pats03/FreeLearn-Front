@@ -350,4 +350,25 @@ button:disabled {
 .dark-theme .card-author,
 .dark-theme .card-status {
   color: #cccccc;
+
+  --text-color: #f0f0f0;
+  --text-secondary-color: #cccccc;
+
+  .dark-theme {
+    --text-color: #ffffff; /* pure white */
+    --text-secondary-color: #dddddd; /* lighter grey */
+    --background-color: #1a1a1a; /* slightly darker bg */
+    --background-secondary-color: #262626; /* better contrast */
+  }
+
+  .dark-theme .card-title {
+    color: #ffffff; /* pure white */
+  }
+
+  .dark-theme .card-subtitle,
+  .dark-theme .card-date,
+  .dark-theme .card-author,
+  .dark-theme .card-status {
+    color: #dddddd;
+  }
 }
