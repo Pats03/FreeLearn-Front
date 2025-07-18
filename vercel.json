@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://free-learn-xi.vercel.app/api/$1"
+    }
+  ]
+}
