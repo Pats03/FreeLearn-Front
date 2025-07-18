@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
     svg {
       color: var(--text-secondary-color);
+      transition: color 0.3s ease;
     }
   }
 
@@ -19,16 +20,17 @@ const Wrapper = styled.div`
     text-transform: capitalize;
     letter-spacing: var(--letter-spacing);
     color: var(--text-color);
+    transition: color 0.3s ease;
   }
 
-  /* 🔷 DARK THEME FIXES */
+  /* 🌙 DARK THEME — Brighter */
   .dark-theme & {
     .job-icon svg {
-      color: #ccc; /* brighter icon in dark mode */
+      color: #fff; /* pure white icon */
     }
 
     .job-text {
-      color: #eee; /* brighter text in dark mode */
+      color: #fff; /* pure white text */
     }
   }
 `;
