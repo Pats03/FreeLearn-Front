@@ -1,18 +1,23 @@
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
-import Wrapper from '../assets/wrappers/ThemeToggle';
-import { useDashboardContext } from '../pages/DashboardLayout';
+import styled from 'styled-components';
 
-const ThemeToggle = () => {
-  const { isDarkTheme, toggleDarkTheme } = useDashboardContext();
-  return (
-    <Wrapper onClick={toggleDarkTheme}>
-      {isDarkTheme ? (
-        <BsFillSunFill className="toggle-icon" />
-      ) : (
-        <BsFillMoonFill className="toggle-icon" />
-      )}
-    </Wrapper>
-  );
-};
+const Wrapper = styled.button`
+  background: transparent;
+  border: none;
+  width: 3.5rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 
-export default ThemeToggle;
+  .toggle-icon {
+    font-size: 1.5rem;
+    color: #fff; /* visible */
+    transition: color 0.3s ease;
+  }
+
+  &:hover .toggle-icon {
+    color: #87eaf2;
+  }
+`;
+
+export default Wrapper;
