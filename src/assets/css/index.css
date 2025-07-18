@@ -310,6 +310,10 @@ button:disabled {
   margin-top: 1rem;
 }
 
+.card-title {
+  color: var(--text-color);
+}
+
 .container {
   width: var(--fluid-width);
   max-width: var(--max-width);
@@ -329,4 +333,22 @@ button:disabled {
 .declined {
   background: #ffeeee;
   color: #d66a6a;
+}
+
+.card-subtitle,
+.card-date,
+.card-author,
+.card-status {
+  color: var(--text-secondary-color);
+}
+
+.dark-theme .card-title {
+  color: #f0f0f0;
+}
+
+.dark-theme .card-subtitle,
+.dark-theme .card-date,
+.dark-theme .card-author,
+.dark-theme .card-status {
+  color: #cccccc;
 }
