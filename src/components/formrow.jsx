@@ -3,6 +3,7 @@ const FormRow = ({
   name,
   labelText,
   defaultValue = '',
+  placeholder = '',
   onChange,
   accept,
 }) => {
@@ -17,6 +18,7 @@ const FormRow = ({
         name={name}
         className="form-input"
         defaultValue={defaultValue}
+        placeholder={placeholder}
         accept={accept}
         onChange={onChange}
         required

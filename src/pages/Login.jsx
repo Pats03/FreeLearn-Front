@@ -23,7 +23,7 @@ const Login = () => {
 
   return (
     <Wrapper>
-      <div className="alert alert-warning" role="alert">
+      <div className="bg-yellow-100 text-yellow-800 p-3 rounded mb-4">
         ⚠️ Please enable third-party cookies in your browser settings for this
         site to work properly.
       </div>
@@ -32,8 +32,9 @@ const Login = () => {
         <Logo />
         <h4>Login</h4>
 
-        <Formrow type="text" name="email" defaultValue="rasmitha@gmail.com" />
-        <Formrow type="password" name="password" defaultValue="rasmitha" />
+        <FormRow type="text" name="email" placeholder="rasmitha@gmail.com" />
+
+        <FormRow type="password" name="password" placeholder="rasmitha" />
 
         <button type="submit" className="btn btn-block" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
