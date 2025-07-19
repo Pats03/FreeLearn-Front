@@ -12,7 +12,7 @@ export const action = async ({ request }) => {
     toast.success('Login successful');
     return redirect('/dashboard');
   } catch (error) {
-    toast.error(error?.response?.data?.msg);
+    toast.error(error?.response?.data?.msg || 'Login failed');
     return error;
   }
 };
@@ -20,28 +20,37 @@ export const action = async ({ request }) => {
 const Login = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
+
   return (
     <Wrapper>
+      <div className="alert alert-warning" role="alert">
+        ⚠️ Please enable third-party cookies in your browser settings for this
+        site to work properly.
+      </div>
+
       <Form method="post" className="form">
         <Logo />
         <h4>Login</h4>
-        <Formrow type="text" name="email" />
-        <Formrow type="password" name="password" />
+
+        <Formrow type="text" name="email" defaultValue="rasmitha@gmail.com" />
+        <Formrow type="password" name="password" defaultValue="rasmitha" />
+
         <button type="submit" className="btn btn-block" disabled={isSubmitting}>
-          {isSubmitting ? 'submitting...' : 'submit'}
+          {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
+
         <button type="button" className="btn btn-block">
-          explore the app
+          Explore the app
         </button>
+
         <p>
-          Not a member yet?
+          Not a member yet?{' '}
           <Link to="/register" className="member-btn">
             Register
           </Link>
         </p>
       </Form>
     </Wrapper>
-    
   );
 };
 
